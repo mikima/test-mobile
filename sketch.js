@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(500,500)
+  createCanvas(1080, 1920)
 }
 
 function draw() {
@@ -7,6 +7,11 @@ function draw() {
   noFill();
   //rect(mouseX,mouseY,-15,-15);
   if(touchIsDown){
-    ellipse(random(0,500),random(0,500),10,10);
+    //ellipse(random(0,500),random(0,500),10,10);
+    console.log(touches);
+    for(var i=0; i<touches.length; i++) {
+
+    	ellipse(touches[i].x,touches[i].y,20);
+    }
   }
 }
